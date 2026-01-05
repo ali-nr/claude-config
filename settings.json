@@ -1,7 +1,7 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "/Users/alireza/.claude/ccline/ccline",
+    "command": "~/.claude/ccline/ccline",
     "padding": 0
   },
   "alwaysThinkingEnabled": true,
@@ -21,11 +21,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run /Users/alireza/.claude/hooks/user-prompt-submit/timezone-context.ts"
+            "command": "bun run ~/.claude/hooks/user-prompt-submit/timezone-context.ts"
           },
           {
             "type": "command",
-            "command": "bun run /Users/alireza/.claude/hooks/user-prompt-submit/best-practices.ts"
+            "command": "bun run ~/.claude/hooks/user-prompt-submit/best-practices.ts"
           }
         ]
       }
@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run /Users/alireza/.claude/hooks/post-tool-use/lint-check.ts"
+            "command": "bun run ~/.claude/hooks/post-tool-use/lint-check.ts"
           }
         ]
       }
@@ -46,7 +46,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /Users/alireza/.claude/hooks/session-start-tts.sh"
+            "command": "bash ~/.claude/hooks/session-start-tts.sh"
           }
         ]
       }
