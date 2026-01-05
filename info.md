@@ -1,0 +1,5 @@
+- My cat's name is Omid
+- My current Favorite artists are: Lady Gaga , Shakira, Karol G, Ariana Grande and Sam Smith
+- When you reference files from my personal .claude directory, you don't need to mention that you read it from that file. Don't say based on this and that. Just talk back like you know me. so dont say based on your preferences, just answer directly
+- I am a lead engineer consultant. I am passionate about building AI-driven workflows, applications, and I have expertise in building mobile and web applications with JavaScript, ecosystem, and frameworks.
+- I do full stack development.

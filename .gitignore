@@ -1,0 +1,41 @@
+# Generated/Runtime
+audio/
+piper-voices/
+hooks/node_modules/
+hooks/bun.lock
+
+# CCometixLine build artifacts
+CCometixLine/npm/
+CCometixLine/target/
+
+# Commands - installable plugins
+commands/bmad/
+commands/agent-vibes/
+
+# Hooks - installable scripts
+hooks/bmad-*.sh
+hooks/piper-*.sh
+
+# Session/History
+history.jsonl
+file-history/
+debug/
+session-env/
+shell-snapshots/
+config/
+ide/
+plans/
+prompts/
+plugins/
+projects/
+statsig/
+telemetry/
+todos/
+personalities/
+
+# Machine-specific
+.DS_Store
+github-star-reminder.txt
+piper-voices-dir.txt
+stats-cache.json
+CCometixLine/
