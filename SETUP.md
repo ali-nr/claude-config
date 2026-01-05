@@ -4,6 +4,25 @@ Complete step-by-step guide to replicate the agentic development environment.
 
 ---
 
+## Quick Start
+
+**Step 0**: Clone this repo first, then follow this guide:
+
+```bash
+# Clone claude-config to get this setup guide
+git clone git@github.com:ali-nr/claude-config.git ~/.claude
+
+# Open the setup guide
+cat ~/.claude/SETUP.md
+
+# Or view in your editor
+code ~/.claude/SETUP.md
+```
+
+Now follow the steps below.
+
+---
+
 ## Prerequisites
 
 ### Required Tools (install via Homebrew)
