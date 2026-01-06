@@ -80,6 +80,8 @@ EOF
 - Acknowledgment: Action + approach + why
 - Completion: Result + decisions + trade-offs
 - Include: Full reasoning, alternatives
+- Progress: Give TTS updates every 3-4 tool calls during long tasks
+- Agents: Summarize agent results when Task tool returns
 
 EOF
     ;;

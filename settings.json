@@ -1,7 +1,7 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "/Users/<USERNAME>/.claude/ccline/ccline",
+    "command": "/Users/alin/.claude/ccline/ccline",
     "padding": 0
   },
   "alwaysThinkingEnabled": true,
@@ -21,11 +21,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run /Users/<USERNAME>/.claude/hooks/user-prompt-submit/timezone-context.ts"
+            "command": "bun run /Users/alin/.claude/hooks/user-prompt-submit/timezone-context.ts"
           },
           {
             "type": "command",
-            "command": "bun run /Users/<USERNAME>/.claude/hooks/user-prompt-submit/best-practices.ts"
+            "command": "bun run /Users/alin/.claude/hooks/user-prompt-submit/best-practices.ts"
           }
         ]
       }
@@ -36,7 +36,16 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bun run /Users/<USERNAME>/.claude/hooks/post-tool-use/lint-check.ts"
+            "command": "bun run /Users/alin/.claude/hooks/post-tool-use/lint-check.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun run /Users/alin/.claude/hooks/post-tool-use/agent-complete-tts.ts"
           }
         ]
       }
@@ -46,7 +55,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /Users/<USERNAME>/.claude/hooks/session-start-tts.sh"
+            "command": "bash /Users/alin/.claude/hooks/session-start-tts.sh"
           }
         ]
       }

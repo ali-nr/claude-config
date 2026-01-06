@@ -71,3 +71,41 @@ Skills: [used] | Cmds: [ran] | Changed: [files] | Risks: [any]
 
 # Rules & Conventions
 @~/.claude/rules/unit-test-rules.md
+
+# Proactive Memory (CASS)
+
+**Automatic memory workflow — no manual commands needed.**
+
+## Session Start (AUTO)
+When user starts working on a task, automatically run:
+```bash
+cm context "task description" --json
+```
+Review the output silently. Use high-scoring patterns. Avoid negative-scored patterns.
+
+## During Work (AUTO)
+When writing or editing code, add inline CASS feedback for significant decisions:
+```javascript
+// [cass: helpful b-xxx] Why this approach worked
+// [cass: harmful b-yyy] Why that approach failed
+```
+Only add feedback for meaningful patterns, not trivial code.
+
+## Session End (AUTO)
+Before user closes the session (when they say goodbye, done, or indicate finishing):
+1. Summarize what patterns helped or failed
+2. Run outcome commands:
+```bash
+cm outcome success b-xxx,b-yyy --summary "What worked and why"
+cm outcome failure b-zzz --summary "What failed and why"
+cm outcome-apply
+```
+3. Confirm memory was updated
+
+If no bullet IDs were used, skip outcomes but still acknowledge session end.
+
+## Key Rules
+- Run `cm context` silently at task start — don't ask, just do it
+- Add inline feedback as you code — capture learnings in real-time
+- Prompt for outcomes before session ends — don't let learnings slip away
+- Use `--json` for parsing, plain output for user visibility

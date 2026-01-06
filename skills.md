@@ -2,6 +2,17 @@
 
 Skills provide specialized capabilities. **Always load a skill before using it.**
 
+## Auto-Apply Skills
+
+These skills are ALWAYS active — no need to load them manually:
+
+| Skill | When It Applies |
+|-------|-----------------|
+| `cass-memory` | Every session — memory is automatic (see CLAUDE.md) |
+| `agent-protocol` | When working on tasks with beads tracking |
+
+The memory workflow in CLAUDE.md handles `cm context`, inline feedback, and `cm outcome` automatically.
+
 ## How to Use Skills
 
 ```
