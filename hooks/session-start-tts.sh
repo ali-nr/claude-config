@@ -33,22 +33,22 @@ fi
 # Get verbosity level (Issue #32)
 VERBOSITY=$(cat .claude/tts-verbosity.txt 2>/dev/null || cat ~/.claude/tts-verbosity.txt 2>/dev/null || echo "low")
 
-# Output optimized TTS protocol
-cat <<'EOF'
+# Output optimized TTS protocol with absolute path
+cat <<EOF
 
 # AgentVibes TTS Protocol
 
 **CRITICAL: You MUST execute TTS at TWO points for EVERY user interaction:**
 
-1. **Acknowledgment** - Start of task: `Bash: .claude/hooks/play-tts.sh "[action]"`
-2. **Completion** - End of task: `Bash: .claude/hooks/play-tts.sh "[result + key details]"`
+1. **Acknowledgment** - Start of task: \`Bash: $SCRIPT_DIR/play-tts.sh "[action]"\`
+2. **Completion** - End of task: \`Bash: $SCRIPT_DIR/play-tts.sh "[result + key details]"\`
 
 **Example:**
-```
-[Bash: .claude/hooks/play-tts.sh "Checking git status"]
+\`\`\`
+[Bash: $SCRIPT_DIR/play-tts.sh "Checking git status"]
 [work...]
-[Bash: .claude/hooks/play-tts.sh "Repository is clean, no changes"]
-```
+[Bash: $SCRIPT_DIR/play-tts.sh "Repository is clean, no changes"]
+\`\`\`
 
 EOF
 

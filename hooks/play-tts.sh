@@ -153,7 +153,6 @@ speak_text() {
       ;;
     *)
       echo "❌ Unknown provider: $provider" >&2
-      echo "   Run: /agent-vibes:provider list" >&2
       return 1
       ;;
   esac

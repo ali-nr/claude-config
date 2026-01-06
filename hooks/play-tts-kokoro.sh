@@ -32,8 +32,8 @@ OUTPUT_FILE="$AUDIO_DIR/kokoro-$(date +%s).wav"
 MODEL_PATH="$HOME/.cache/kokoro/kokoro-v1.0.onnx"
 VOICES_PATH="$HOME/.cache/kokoro/voices-v1.0.bin"
 
-# Run Kokoro TTS
-python3 << EOF
+# Run Kokoro TTS using venv Python
+"$HOME/.claude/venv/bin/python3" << EOF
 from kokoro_onnx import Kokoro
 import soundfile as sf
 import sys

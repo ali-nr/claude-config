@@ -38,6 +38,9 @@
 # Fix locale warnings
 export LC_ALL=C
 
+# Add Homebrew library path for espeak-ng dependency
+export DYLD_LIBRARY_PATH="$HOME/homebrew/lib:${DYLD_LIBRARY_PATH:-}"
+
 TEXT="$1"
 VOICE_OVERRIDE="$2"  # Optional: voice model name
 

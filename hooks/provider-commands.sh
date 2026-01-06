@@ -114,17 +114,6 @@ provider_list() {
   echo "│   Cost: Free forever                                       │"
   echo "│   Platform: WSL, Linux only                                │"
   echo "│   Offline: Yes                                             │"
-  echo "│                                                            │"
-
-  # Kokoro (Hugging Face)
-  if [[ "$current_provider" == "kokoro" ]]; then
-    echo "│ ✓ Kokoro        Fast+Natural      ⭐⭐⭐⭐⭐      [ACTIVE]    │"
-  else
-    echo "│   Kokoro        Fast+Natural      ⭐⭐⭐⭐⭐   [RECOMMENDED] │"
-  fi
-  echo "│   Cost: Free (Apache 2.0)                                 │"
-  echo "│   Platform: All (Python + ONNX)                           │"
-  echo "│   Offline: Yes                                             │"
 
   # macOS Say (show at end for non-macOS systems)
   if [[ "$is_macos" != true ]]; then
@@ -401,35 +390,9 @@ provider_info() {
       echo "Full comparison: agentvibes.org/providers"
       ;;
 
-    kokoro)
-      echo "┌────────────────────────────────────────────────────────────┐"
-      echo "│ Kokoro - Fast & Natural TTS (82M params)                   │"
-      echo "├────────────────────────────────────────────────────────────┤"
-      echo "│ Quality:     ⭐⭐⭐⭐⭐ (Natural, rivals larger models)        │"
-      echo "│ Speed:       ~2-3x real-time (very fast!)                  │"
-      echo "│ Cost:        Free (Apache 2.0)                             │"
-      echo "│ Platform:    All (Python + ONNX, ~350MB model)             │"
-      echo "│ Offline:     Yes                                           │"
-      echo "│                                                            │"
-      echo "│ Trade-offs:                                                │"
-      echo "│ + Fast generation (~1.5s for 4s audio)                    │"
-      echo "│ + Natural sounding (rivals larger models)                 │"
-      echo "│ + Lightweight (82M params, 350MB)                         │"
-      echo "│ + Multiple voices and languages                           │"
-      echo "│ + Apache 2.0 license                                      │"
-      echo "│ - Requires espeak-ng for phonemization                    │"
-      echo "│                                                            │"
-      echo "│ Voices: af_heart, af_bella, am_adam, bf_emma, bm_george   │"
-      echo "│                                                            │"
-      echo "│ Best for: Fast feedback + natural quality                 │"
-      echo "└────────────────────────────────────────────────────────────┘"
-      echo ""
-      echo "Full comparison: agentvibes.org/providers"
-      ;;
-
     *)
       echo "❌ Unknown provider: $provider_name"
-      echo "Available: piper, macos, kokoro"
+      echo "Available: piper, macos"
       ;;
   esac
 }
@@ -469,12 +432,6 @@ provider_get() {
       echo "Quality: ⭐⭐⭐⭐"
       echo "Cost: Free (built-in)"
       echo "Offline: Yes"
-      ;;
-    kokoro)
-      echo "Quality: ⭐⭐⭐⭐⭐ (Fast + Natural)"
-      echo "Cost: Free (Apache 2.0)"
-      echo "Offline: Yes"
-      echo "Speed: ~2-3x real-time"
       ;;
   esac
 
